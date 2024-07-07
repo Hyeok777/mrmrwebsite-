@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mrmr</title>
+    <link rel="stylesheet" href="mrmrstyle.css">
+    <link href="member.html">
+</head>
+<body>
+    
+    
+    <div id="page1" class="container">
+        
+        <div class="header">
+            
+            <h1><image id="headericon" src="https://mrmrpromotion.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F486764b6-13a7-4e23-b807-e3609ccb37f9%2F7fc63007-1d00-41f6-823f-440981e059ff%2F%25EB%25AC%25B4%25EB%259F%25AD%25EB%25AC%25B4%25EB%259F%25AD_%25EB%25A1%259C%25EA%25B3%25A0.png?table=block&id=05504ba2-5a30-4cc7-a6c7-d6176ff98814&spaceId=486764b6-13a7-4e23-b807-e3609ccb37f9&width=250&userId=&cache=v2"><a href="#">MRMR</a></h1>
+            <div class="nav"><ul>
+                <li><a href="original.html">홈</a></li>
+                <li><a href="member.html">멤버</a></li>
+                <li><a href="#page3">업적</a></li>
+                <li><a href="#page4">프로젝트</a></li>
+             </ul>
+            </div>
+        </div>
+        <div class="main">
+           <section> 
+            <p>Plant<br>Us,<br>Raise<br>Earth</p>
+           <d><img id="buds" src="C:\Users\이진혁\Documents\카카오톡 받은 파일\KakaoTalk_20240401_205450415.png"></d>
+          </section>
+        </div>
+        <div class="container2">
+          <div class="ani"><p>Plant Us, Raise Earth</p></div>
+         
+            
+          <script>
+            function magneticButton(element){
+                const children = element.children[0]
+
+                element.addEventListener('mousemove',e =>{
+                    const{offsetLeft, offsetTop,offsetWidth,offsetHeight}=element
+                    const left = e.pageX - offsetLeft
+                    const top = e.pageY - offsetTop
+                    const centerX = left - offsetWidth / 2
+                    const centerY = top - offsetHeight / 2
+                    const d = Math.sqrt(centerX**2+ centerY **2)
+                    console.log(centerX,centerY,d)
+
+                    element.style.transform = 
+                   `translate3d(${centerX/1.44}px,${centerY/1.44}px,0)`
+                    
+                   children.style.transform =
+                   `translate3d(${centerX/4}px,${centerY/4}px,0)`
+                })
+
+                element.addEventListener('mouseleave', ()=>{
+                    element.style.transform = ''
+                    children.style.transform = ''
+                })
+            }
+            const c = document.querySelector('d')
+            magneticButton(c)
+            </script>
+
+            <script>
+                let observer = new IntersectionObserver((e)=>{
+                    e.forEach((박스)=> {
+                        if(박스.isIntersecting){
+                            박스.target.style.opacity = 1;
+                            
+                       
+                        }
+                        else{
+                            박스.target.style.opacity = 0;
+                            
+                        }
+                       
+                    })
+                });
+                let div = document.querySelectorAll('p')
+           
+                observer.observe(div[1])
+                observer.observe(div[2])
+                observer.observe(div[3])
+                observer.observe(div[4])
+              
+            </script>
+            <div class="smartfarm">
+                <img id="farm1" src="1.png" >
+                <img id="farm2" src="2.png"> 
+            
+            </div>
+            <div class = "about">
+                <p><span class="ingredient">무럭무럭</span>은 IT와 농업을 결합한 형태의 <b>스마트팜</b>을 관리하는 동아리로,<br>농업의 자동화 및 무인화 기술을 개발하며 스마트팜에 대해 연구하고 스마트팜에서<br>재배한 작물들을 판매하는 동아리입니다.</p>
+            </div>
+    </div>
+    <div id="page3" class="container3">
+        <div class="info">
+            <h4><span class="yyy">스마트팜 기술,</span><br>농산물 생산의 <span class="yyy">안전성</span>과 <span class="yyy">효율성</span><br>기술력을 활용한 <span class="yyy">사회적 가치</span></h4>
+            <h5><span class="ingredient">농업과 관련된 IT프로젝트</span>
+                <br>를 진행하며 보다 <span class="ingredient">더 나은 세상</span>을 만들기 위해 노력해나가고 있습니다.</h5>
+        </div>
+        <img id="farm3" src="3.png">
+    </div>
+    <div id="page4" class="container4">
+        <div class="biz"><h2>2021, 2022 <span class="ingredient">비즈쿨 성과발표회 1위, 3위</span></h2></div>
+        <div class="asns">
+            <img id="farm4" src="4.png">
+            <img id="farm5" src="5.png">
+        </div>
+        <div class="semi">
+            <p >2023 입학설명회 스마트팜 작물 & 에이드 판매</p>
+            <p class="kk">2023 크라우드 펀딩, 하바리움</p>
+        </div>
+    </div>
+    <div id="page5" class="container5">
+        <div class="ticket"><h1>✈️당신을 위한 <span class="ing">무럭무럭행</span> 티켓, 지금 바로 <span class="ing">지원</span>하세요.</h1>
+        </div>
+        <img id="pass"src="6.png">
+        
+        <div class="click"><a class="go" href="https://docs.google.com/forms/d/e/1FAIpQLSeGYIZNlzJAxn5NTL0FEBk5W-fUcessetEtOWqdIXTVL_1rxA/viewform">무럭무럭으로 떠나기</a></div>
+    </div>
+    <div id="last" class="container6"></div>
+    
